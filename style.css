@@ -10,6 +10,7 @@ body{
 p{
     margin: 0;
     color: #a7a7a7;
+    font-size: 15px;
 }
 .cabecalho {
     display: flex;
@@ -37,7 +38,7 @@ nav a {
 	font-weight: bold;
 	font-size: 16px;
 	text-decoration: none;
-    padding-inline-start: 2px;
+    padding-inline-start: 10px;
 }
 
 .box1{
@@ -57,27 +58,27 @@ nav a {
 }
 
 .titulo-pincipal {
-    width: 45%;
+    width: 50%;
 }
 
 h1 {
     padding: 0;
     margin: 0;
     font-weight: 800;
-    font-size: 46px;
+    font-size: 50px;
+    line-height: 95%;
 }
 .imagem-principal {
     width: 100%;
     padding-bottom: 3%;
+    object-fit: contain;
 }
 
 .new-middle{
-    width: 50%;
+    width: 46%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 8%;
-    font-size: 15px;
 }
 
 button {
@@ -90,10 +91,6 @@ button {
     font-weight: 700;
     border: hidden;
 }
-
-/* button :active{
-    background-color: hsl(5, 85%, 63%);;
-} */
 
 .right-card{
     border: 1px solid rebeccapurple;
@@ -112,4 +109,44 @@ h2{
 
 h3 {
     color: white;
+}
+
+.box2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.news{
+    display: flex;
+    justify-content:space-between;
+    width: 33%;
+    gap: 5%
+    
+}
+
+.thumbnail{
+    height: 120px;
+    object-fit: contain;
+}
+
+.description{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.num-new{
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: #c9c9c9;
+}
+.titulo-new{
+    color: hsl(240, 100%, 5%);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5% 0 5% 0;
 }
