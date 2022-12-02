@@ -1,22 +1,33 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+html{
+    font-size: 62.5%;
+}
+
 body{
     font-family: 'Inter', sans-serif;
-    padding: 9%;
-    margin: 0;
+    max-width: 980px;
+    margin: auto;
+    padding: 2%;
 }
 
 p{
     margin: 0;
     color: #a7a7a7;
-    font-size: 15px;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
 }
 .cabecalho {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 	width: 100%;
+    padding-top: 30px;
     align-items: center;
 	margin: 0;
 }
@@ -36,17 +47,27 @@ nav a {
 	text-transform: uppercase;
 	color: #a7a7a7;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 1.5rem;
 	text-decoration: none;
     padding-inline-start: 10px;
 }
 
-.box1{
+.container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+}
+
+.box1{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(60%, 1fr));
     padding-top: 5%;
     padding-bottom: 5%;
-    height: 60%;
+    width: 100%;
+    max-width: 980px;
     gap: 5%;
 }
 
@@ -62,10 +83,9 @@ nav a {
 }
 
 h1 {
-    padding: 0;
-    margin: 0;
     font-weight: 800;
-    font-size: 50px;
+    font-size: 4.5rem;
+    line-height: 3.4rem;
     line-height: 95%;
 }
 .imagem-principal {
@@ -75,27 +95,34 @@ h1 {
 }
 
 .new-middle{
-    width: 46%;
+    width: 265px;
     display: flex;
+    align-content: flex-end;
     flex-direction: column;
     justify-content: space-between;
 }
 
 button {
-    padding: 10px;
-    font-size: 14px;
+    padding: 5px;
+    font-size: 8pt;
     color: white;
     background-color: hsl(5, 85%, 63%);
-    width: 55%;
-    letter-spacing: 3px;
+    width: 160px;
+    height: 40px;
+    letter-spacing: 1pt;
     font-weight: 700;
     border: hidden;
+}
+
+.botao :hover{
+    background-color: hsl(5, 80%, 72%);
 }
 
 .right-card{
     border: 1px solid rebeccapurple;
     padding: 20px;
-    background-color: hsl(240, 100%, 5%)
+    background-color: hsl(240, 100%, 5%);
+    width: 300px;
 }
 
 h2{
@@ -104,49 +131,99 @@ h2{
     margin-top: 10px;
     margin-bottom: 10px;
     color: hsl(35, 77%, 62%);
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 h3 {
     color: white;
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .box2{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 320px 320px 320px;
     width: 100%;
+    max-width: 980px;
 }
 
 .news{
     display: flex;
-    justify-content:space-between;
-    width: 33%;
-    gap: 5%
-    
+    width: 100%;
+}
+
+a{
+    text-decoration: wavy;
 }
 
 .thumbnail{
-    height: 120px;
+    width: 90px;
     object-fit: contain;
+    align-items: center;
+    padding-top: 5px;
 }
 
 .description{
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-left: 4%;
     padding-right: 4%;
 }
 
 .num-new{
     font-weight: 700;
-    font-size: 32px;
+    font-size: 3rem;
     letter-spacing: 1px;
     color: #c9c9c9;
 }
 .titulo-new{
     color: hsl(240, 100%, 5%);
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: 700;
-    padding: 5% 0 5% 0;
+    padding: 3% 0 3% 0;
+}
+
+@media (max-width: 768px) {
+    html{
+        font-size: 56%;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px 0 20px 0;
+    }
+    .box2{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+@media(max-width: 654px){
+    .box1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+    .box2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .news{
+        padding:10px 0 10px 0
+    }
 }
